@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Istok_Web, Piazzolla } from "next/font/google";
+import { ReactLenis } from "lenis/react";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const istockWeb = Istok_Web({
+  weight: ["400", "700"],
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-istok-web",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const piazzolla = Piazzolla({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-piazzolla",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="pl-PL"
+      className={`h-full ${istockWeb.variable} ${piazzolla.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ReactLenis root options={{ lerp: 0.05, duration: 0.3 }}>
+          {children}
+        </ReactLenis>
+      </body>
     </html>
   );
 }
