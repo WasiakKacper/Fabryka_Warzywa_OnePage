@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Istok_Web, Piazzolla } from "next/font/google";
 import { ReactLenis } from "lenis/react";
 import "./globals.css";
-import "../fontello/fontello.css";
 
 const istockWeb = Istok_Web({
   weight: ["400", "700"],
