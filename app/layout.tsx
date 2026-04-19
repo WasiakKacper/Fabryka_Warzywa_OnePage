@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Istok_Web, Piazzolla } from "next/font/google";
 import { ReactLenis } from "lenis/react";
 import "./globals.css";
+import "../fontello/fontello.css";
 
 const istockWeb = Istok_Web({
   weight: ["400", "700"],
@@ -30,9 +31,7 @@ export default function RootLayout({
       className={`h-full ${istockWeb.variable} ${piazzolla.variable} antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ReactLenis root options={{ lerp: 0.05, duration: 0.3 }}>
-          {children}
-        </ReactLenis>
+        <ReactLenis root>{children}</ReactLenis>
       </body>
     </html>
   );
