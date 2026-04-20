@@ -2,6 +2,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
+import { Link } from "react-scroll";
 
 const Home = () => {
   const ref = useRef(null);
@@ -37,9 +38,12 @@ const Home = () => {
         <h2 className="text-2xl lg:text-6xl font-bold w-[80%] md:w-[60%] font-serif">
           Świeże warzywa i owoce od lokalnych rolników
         </h2>
-        <button className="w-[50%] lg:w-[12%] text-0.5xl px-2 py-3 rounded-md bg-white/20 backdrop-blur-xs border border-white cursor-pointer font-sans hover:bg-white transition-colors ease-in-out duration-300 hover:text-black">
-          Dowiedz się więcej
-        </button>
+
+        <Link to="offer" smooth={true} className="w-[50%] lg:w-[12%]">
+          <button className="w-full text-0.5xl px-2 py-3 rounded-md bg-white/20 backdrop-blur-xs border border-white cursor-pointer font-sans hover:bg-white transition-colors ease-in-out duration-300 hover:text-black">
+            Dowiedz się więcej
+          </button>
+        </Link>
       </div>
     </section>
   );

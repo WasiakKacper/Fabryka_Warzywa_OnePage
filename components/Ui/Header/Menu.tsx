@@ -1,15 +1,26 @@
+import { Link } from "react-scroll";
 import { motion } from "motion/react";
 import { itemVariants, backgroundVariants, listVariants } from "./Vartiants";
 
 type MenuProps = {
   state: boolean;
+  close: () => void;
 };
 
 type ListItemProps = {
   name: string;
+  target: string;
+  onClose: () => void;
 };
 
-const ListItem: React.FC<ListItemProps> = ({ name }) => {
+const menuItems = [
+  { name: "HOME", target: "home" },
+  { name: "OFERTA", target: "offer" },
+  { name: "O NAS", target: "about" },
+  { name: "KONTAKT", target: "contact" },
+];
+
+const ListItem: React.FC<ListItemProps> = ({ name, target, onClose }) => {
   return (
     <motion.li
       variants={itemVariants}
@@ -19,12 +30,14 @@ const ListItem: React.FC<ListItemProps> = ({ name }) => {
         before:h-1 before:w-0 before:bg-white 
         before:transition-all before:duration-300 hover:before:w-full"
     >
-      {name}
+      <Link to={target} smooth={true} onClick={onClose}>
+        {name}
+      </Link>
     </motion.li>
   );
 };
 
-const Menu: React.FC<MenuProps> = ({ state }) => {
+const Menu: React.FC<MenuProps> = ({ state, close }) => {
   return (
     <motion.section
       variants={backgroundVariants}
@@ -38,8 +51,13 @@ const Menu: React.FC<MenuProps> = ({ state }) => {
         animate={state ? "open" : "closed"}
         className={`flex flex-col justify-center *:cursor-pointer w-full h-full text-3xl font-bold p-10 lg:hidden gap-5 z-40`}
       >
-        {["HOME", "O NAS", "OFERTA", "KONTAKT"].map((item) => (
-          <ListItem key={item} name={item} />
+        {menuItems.map((item) => (
+          <ListItem
+            key={item.name}
+            name={item.name}
+            target={item.target}
+            onClose={close}
+          />
         ))}
       </motion.ul>
     </motion.section>
