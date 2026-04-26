@@ -5,6 +5,7 @@ import LangBtn from "./LangBtn";
 import MenuBtn from "./MenuBtn";
 import Menu from "./Menu";
 import { Link } from "react-scroll";
+import NextLink from "next/link";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -20,7 +21,9 @@ const Header = () => {
   return (
     <header className="top-0 left-0 w-full z-50 p-4 flex justify-between items-center fixed font-sans">
       <div className="flex flex-1 justify-start items-center">
-        <Logo />
+        <NextLink href="/">
+          <Logo />
+        </NextLink>
       </div>
       <div className="flex flex-1 justify-center items-center">
         <nav className="hidden lg:block p-0.75 w-[70%] rounded-xl bg-gray-300/20 backdrop-blur-xs text-white border border-white">
@@ -51,7 +54,7 @@ const Header = () => {
       </div>
       <div className="flex flex-1 justify-end items-center">
         <LangBtn visibility="hidden lg:flex" />
-        <MenuBtn toggle={handleToggle} />
+        <MenuBtn isOpen={isActive} toggle={handleToggle} />
       </div>
       <Menu state={isActive} close={handleClose} />
     </header>

@@ -1,5 +1,8 @@
+"use client";
 import Logo from "../Logo/Logo";
 import { Link } from "react-scroll";
+import NextLink from "next/link";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,19 +11,22 @@ const Footer = () => {
         <Logo />
       </div>
 
-      <article className="w-[90%] lg:w-[35%] border-y border-white text-center flex gap-10 justify-center">
+      <article className="w-[90%] lg:w-[35%] border-y border-white text-center flex gap-10 justify-center py-4">
         <a
-          className="hover:text-[#3b5998] transition duration-300 p-2"
+          className="hover:text-[#3b5998] transition duration-300 gap-2 flex items-center"
           href="https://www.facebook.com/profile.php?id=100068391292702"
         >
-          Facebook
+          Facebook <FaFacebookSquare className="mb-0.5 text-xl" />
         </a>
         <a
-          className="text-white hover:text-transparent hover:bg-clip-text hover:bg-linear-to-r hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888]
-               transition duration-300 p-2"
+          className="group flex items-center gap-2 text-white transition duration-300"
           href="https://www.instagram.com/fabrykawarzyw/"
         >
-          Instagram<span className="icon-instagram"></span>
+          <span className="leading-none transition duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-[#f09433] group-hover:via-[#dc2743] group-hover:to-[#bc1888]">
+            Instagram
+          </span>
+
+          <FaInstagram className="text-xl transition duration-300 group-hover:text-[#bc1888]" />
         </a>
       </article>
       <ul className="w-full flex gap-5 justify-center text-[10px] lg:text-0.9xl *:cursor-pointer">
@@ -45,7 +51,7 @@ const Footer = () => {
           </Link>
         </li>
         <li className="hover:text-blue-400 transition-colors ease">
-          Polityka prywatności
+          <NextLink href="privacy-policy">Polityka prywatności</NextLink>
         </li>
       </ul>
       <p>© 2026 Fabryka Warzyw</p>

@@ -1,0 +1,44 @@
+const TextContent = [
+  {
+    heading: "1. Administrator danych osobowych",
+    content:
+      "Administratorem Twoich danych osobowych jest Fabryka Warzyw. Adres: ul. Belwederska 42, 99-100 Łęczyca, NIP: 5070080610, E-mail: kontakt@fabrykawarzyw.pl",
+  },
+  {
+    heading: "2. Jakie dane zbieramy?",
+    content:
+      "Na naszej stronie wizytówkowej przetwarzamy wyłącznie dane, które przekazujesz nam dobrowolnie poprzez kontakt e-mailowy lub formularz kontaktowy. Zazwyczaj są to: imię, adres e-mail oraz treść Twojej wiadomości.",
+  },
+  {
+    heading: "3. Cel i podstawa przetwarzania danych",
+    content:
+      "Twoje dane przetwarzamy wyłącznie w celu prowadzenia korespondencji i udzielenia odpowiedzi na Twoje zapytania. Podstawą prawną przetwarzania danych jest uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO), polegający na budowaniu relacji z klientami i udzielaniu informacji o naszej działalności.",
+  },
+  {
+    heading: "4. Udostępnianie danych",
+    content:
+      "Twoje dane są bezpieczne i nie są udostępniane podmiotom trzecim w celach marketingowych. Dostęp do nich mogą mieć jedynie podmioty świadczące dla nas usługi techniczne (np. dostawca hostingu strony internetowej), wyłącznie w zakresie niezbędnym do poprawnego działania witryny.",
+  },
+  {
+    heading: "5. Okres przechowywania danych",
+    content:
+      "Twoje dane będą przechowywane przez czas niezbędny do udzielenia odpowiedzi na Twoją wiadomość oraz zakończenia korespondencji. Po tym czasie dane zostaną usunięte, chyba że przepisy prawa będą wymagały ich dłuższego przechowywania.",
+  },
+  {
+    heading: "6. Prawa użytkownika",
+    content:
+      "Masz prawo do: dostępu do swoich danych oraz otrzymania ich kopii, sprostowania swoich danych, żądania usunięcia danych („prawo do bycia zapomnianym”), ograniczenia przetwarzania danych, wniesienia sprzeciwu wobec przetwarzania, wniesienia skargi do organu nadzorczego (Prezesa Urzędu Ochrony Danych Osobowych).",
+  },
+  {
+    heading: "7. Pliki Cookies",
+    content:
+      "Nasza witryna może korzystać z plików cookies w celu zapewnienia jej prawidłowego działania oraz prowadzenia statystyk odwiedzin. Korzystając z naszej strony, wyrażasz zgodę na używanie plików cookies zgodnie z ustawieniami Twojej przeglądarki. Możesz w każdej chwili zmienić te ustawienia w swojej przeglądarce internetowej.",
+  },
+  {
+    heading: "8. Kontakt",
+    content:
+      "W sprawach związanych z ochroną danych osobowych lub w celu realizacji Twoich praw, prosimy o kontakt pod adresem e-mail: kontakt@fabrykawarzyw.pl.",
+  },
+];
+
+export default TextContent;

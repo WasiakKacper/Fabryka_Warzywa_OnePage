@@ -39,6 +39,7 @@ export default function RootLayout({
     <html
       lang="pl-PL"
       className={`h-full ${istockWeb.variable} ${piazzolla.variable} antialiased`}
+    
     >
       <body className="min-h-full flex flex-col">
         <ReactLenis root>{children}</ReactLenis>
