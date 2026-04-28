@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { motion, useTransform, useScroll } from "motion/react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const Info = () => {
   const ref = useRef(null);
@@ -11,6 +12,9 @@ const Info = () => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["-30%", "15%"]);
+
+  //Setup translation using next-intl
+  const t = useTranslations("Retail");
 
   return (
     <section
@@ -34,11 +38,10 @@ const Info = () => {
       {/* Content*/}
       <div className="relative z-10  w-full text-center text-white flex flex-col justify-center items-center gap-10">
         <h2 className="text-xl md:text-3xl lg:text-5xl font-bold w-[90%] md:w-full font-sans">
-          SPRZEDAŻ DETALICZNA I HURTOWA
+          {t("title")}
         </h2>
         <p className="text-0.5xl lg:text-2xl w-[80%] md:w-[65%] font-sans text-start">
-          Chcesz nawiązać współpracę lub zamówić nasze produkty? Skontaktuj się
-          z nami — chętnie przygotujemy ofertę dopasowaną do Twoich potrzeb.
+          {t("content")}
         </p>
       </div>
     </section>

@@ -3,8 +3,23 @@ import Logo from "../Logo/Logo";
 import { Link } from "react-scroll";
 import NextLink from "next/link";
 import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
+import { useTranslations } from "next-intl";
+
+type navLinksType = {
+  key: string;
+  to: string;
+};
 
 const Footer = () => {
+  const t = useTranslations("Footer.navs");
+
+  const navLinks: navLinksType[] = [
+    { key: "home", to: "home" },
+    { key: "offer", to: "offer" },
+    { key: "about", to: "about" },
+    { key: "contact", to: "contact" },
+  ];
+
   return (
     <footer className="w-full bg-black flex flex-col justify-center items-center p-4 *:p-2 text-white">
       <div className="w-full flex justify-center">
@@ -30,28 +45,15 @@ const Footer = () => {
         </a>
       </article>
       <ul className="w-full flex gap-5 justify-center text-[10px] lg:text-0.9xl *:cursor-pointer">
-        <li>
-          <Link to="home" smooth={true}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="offer" smooth={true}>
-            Oferta
-          </Link>
-        </li>
-        <li>
-          <Link to="about" smooth={true}>
-            O nas
-          </Link>
-        </li>
-        <li>
-          <Link to="contact" smooth={true}>
-            Kontakt
-          </Link>
-        </li>
+        {navLinks.map((link) => (
+          <li key={link.key}>
+            <Link to={link.to} smooth={true}>
+              {t(link.key)}
+            </Link>
+          </li>
+        ))}
         <li className="hover:text-blue-400 transition-colors ease">
-          <NextLink href="privacy-policy">Polityka prywatności</NextLink>
+          <NextLink href="privacy-policy">{t("privacyPolicy")}</NextLink>
         </li>
       </ul>
       <p>© 2026 Fabryka Warzyw</p>

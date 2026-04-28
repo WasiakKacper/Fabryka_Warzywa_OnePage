@@ -1,6 +1,12 @@
 import { Link } from "react-scroll";
 import { motion } from "motion/react";
 import { itemVariants, backgroundVariants, listVariants } from "./Vartiants";
+import { useTranslations } from "next-intl";
+
+type navLinksType = {
+  key: string;
+  to: string;
+};
 
 type MenuProps = {
   state: boolean;
@@ -13,14 +19,9 @@ type ListItemProps = {
   onClose: () => void;
 };
 
-const menuItems = [
-  { name: "HOME", target: "home" },
-  { name: "OFERTA", target: "offer" },
-  { name: "O NAS", target: "about" },
-  { name: "KONTAKT", target: "contact" },
-];
-
 const ListItem: React.FC<ListItemProps> = ({ name, target, onClose }) => {
+  const t = useTranslations("Header.navs");
+
   return (
     <motion.li
       variants={itemVariants}
@@ -30,14 +31,21 @@ const ListItem: React.FC<ListItemProps> = ({ name, target, onClose }) => {
         before:h-1 before:w-0 before:bg-white 
         before:transition-all before:duration-300 hover:before:w-full"
     >
-      <Link to={target} smooth={true} onClick={onClose}>
-        {name}
+      <Link to={target} smooth={true} onClick={onClose} className="uppercase">
+        {t(name)}
       </Link>
     </motion.li>
   );
 };
 
 const Menu: React.FC<MenuProps> = ({ state, close }) => {
+  const navLinks: navLinksType[] = [
+    { key: "home", to: "home" },
+    { key: "offer", to: "offer" },
+    { key: "about", to: "about" },
+    { key: "contact", to: "contact" },
+  ];
+
   return (
     <motion.section
       variants={backgroundVariants}
@@ -51,11 +59,11 @@ const Menu: React.FC<MenuProps> = ({ state, close }) => {
         animate={state ? "open" : "closed"}
         className={`flex flex-col justify-center *:cursor-pointer w-full h-full text-3xl font-bold p-10 lg:hidden gap-5 z-40`}
       >
-        {menuItems.map((item) => (
+        {navLinks.map((item) => (
           <ListItem
-            key={item.name}
-            name={item.name}
-            target={item.target}
+            key={item.key}
+            name={item.key}
+            target={item.to}
             onClose={close}
           />
         ))}

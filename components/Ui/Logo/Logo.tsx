@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Logo = () => {
   return (
-    <div className="flex justify-center w-17 lg:w-[50%]">
+    <div className="flex justify-center w-17 lg:w-[60%]">
       <Image
         src={"/logo.png"}
         alt={"Logo - Fabryka Warzyw"}

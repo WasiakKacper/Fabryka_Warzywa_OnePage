@@ -3,16 +3,19 @@ import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 import { Link } from "react-scroll";
+import { useTranslations } from "next-intl";
 
 const Home = () => {
+  //Animation for background
   const ref = useRef(null);
-
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-
   const y = useTransform(scrollYProgress, [0, 1], ["-30%", "15%"]);
+
+  //Setup translation, use next-intl
+  const t = useTranslations("Home");
 
   return (
     <section
@@ -36,12 +39,12 @@ const Home = () => {
       {/* Content*/}
       <div className="relative z-10  w-full text-center text-white flex flex-col justify-center items-center gap-10">
         <h2 className="text-2xl lg:text-6xl font-bold w-[80%] md:w-[60%] font-serif">
-          Świeże warzywa i owoce od lokalnych rolników
+          {t("title")}
         </h2>
 
         <Link to="offer" smooth={true} className="w-[50%] lg:w-[12%]">
           <button className="w-full text-0.5xl px-2 py-3 rounded-md bg-white/20 backdrop-blur-xs border border-white cursor-pointer font-sans hover:bg-white transition-colors ease-in-out duration-300 hover:text-black">
-            Dowiedz się więcej
+            {t("btn")}
           </button>
         </Link>
       </div>

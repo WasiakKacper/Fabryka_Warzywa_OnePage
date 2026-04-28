@@ -1,0 +1,46 @@
+{
+  "Header": {
+    "navs": {
+      "home": "Home",
+      "offer": "Offer",
+      "about": "About",
+      "contact": "Contact"
+    }
+  },
+  "Home": {
+    "title": "Fresh vegetables and fruits from local farmers",
+    "btn": "Check for more"
+  },
+  "Offer": {
+    "title": "Vegetables, Fruits, Juices, Preserves..."
+  },
+  "About": {
+    "title_part1": "ABOUT",
+    "title_part2": "US",
+    "content": [
+      "We create a place where tradition meets modernity – straight from the field to your home or business.",
+      "Our goal is to promote the best of what Polish soil has to offer. That's why we work with local farmers and producers who, like us, prioritize quality, freshness, and natural farming methods. This means you'll find products in our online store that capture the flavor of a true garden."
+    ]
+  },
+  "Retail": {
+    "title": "RETAIL AND WHOLESALE",
+    "content": "Would you like to collaborate or order our products? Contact us—we'll be happy to prepare an offer tailored to your needs."
+  },
+  "Contact": {
+    "title": "CONTACT",
+    "options": {
+      "phone": "PHONE: +48 669-933-235",
+      "email": "E-MAIL: KONTAKT@FABRYKAWARZYW.PL",
+      "address": "ADDRESS: BELWEDERSKA 42, 99-100 ŁĘCZYCA"
+    }
+  },
+  "Footer": {
+    "navs": {
+      "home": "Home",
+      "offer": "Offer",
+      "about": "About",
+      "contact": "Contact",
+      "privacyPolicy": "Privacy policy"
+    }
+  }
+}

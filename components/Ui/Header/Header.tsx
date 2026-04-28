@@ -6,6 +6,12 @@ import MenuBtn from "./MenuBtn";
 import Menu from "./Menu";
 import { Link } from "react-scroll";
 import NextLink from "next/link";
+import { useTranslations } from "next-intl";
+
+type navLinksType = {
+  key: string;
+  to: string;
+};
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -18,6 +24,15 @@ const Header = () => {
     setIsActive(false);
   };
 
+  const t = useTranslations("Header.navs");
+
+  const navLinks: navLinksType[] = [
+    { key: "home", to: "home" },
+    { key: "offer", to: "offer" },
+    { key: "about", to: "about" },
+    { key: "contact", to: "contact" },
+  ];
+
   return (
     <header className="top-0 left-0 w-full z-50 p-4 flex justify-between items-center fixed font-sans">
       <div className="flex flex-1 justify-start items-center">
@@ -28,26 +43,13 @@ const Header = () => {
       <div className="flex flex-1 justify-center items-center">
         <nav className="hidden lg:block p-0.75 w-[70%] rounded-xl bg-gray-300/20 backdrop-blur-xs text-white border border-white">
           <ul className="w-full flex justify-evenly *:cursor-pointer *:text-center">
-            <li>
-              <Link to="home" smooth={true}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="offer" smooth={true}>
-                Oferta
-              </Link>
-            </li>
-            <li>
-              <Link to="about" smooth={true}>
-                O nas
-              </Link>
-            </li>
-            <li>
-              <Link to="contact" smooth={true}>
-                Kontakt
-              </Link>
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.key}>
+                <Link to={link.to} smooth={true}>
+                  {t(link.key)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <LangBtn visibility="flex lg:hidden" />

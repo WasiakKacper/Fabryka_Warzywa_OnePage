@@ -1,8 +1,8 @@
-import Header from "../../components/Ui/Header/Header";
-import Footer from "../../components/Ui/Footer/Footer";
+import Header from "../../../components/Ui/Header/Header";
+import Footer from "../../../components/Ui/Footer/Footer";
 import TextContent from "./textContent";
-import Paragraph from "../../components/Ui/Paragraph/Paragraph";
-import Link from "next/link";
+import Paragraph from "../../../components/Ui/Paragraph/Paragraph";
+
 
 const PrivacyPolicy = () => {
   return (
