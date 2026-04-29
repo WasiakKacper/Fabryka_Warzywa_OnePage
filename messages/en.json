@@ -42,5 +42,43 @@
       "contact": "Contact",
       "privacyPolicy": "Privacy policy"
     }
+  },
+  "PrivacyPolicy": {
+    "title": "PRIVACY POLICY",
+    "sections": [
+      {
+        "heading": "1. Personal Data Administrator",
+        "content": "The administrator of your personal data is Fabryka Warzyw. Address: ul. Belwederska 42, 99-100 Łęczyca, Tax ID (NIP): 5070080610, E-mail: kontakt@fabrykawarzyw.pl"
+      },
+      {
+        "heading": "2. What data do we collect?",
+        "content": "On our business showcase website, we only process data that you provide voluntarily via e-mail contact or the contact form. This usually includes: name, e-mail address, and the content of your message."
+      },
+      {
+        "heading": "3. Purpose and basis for data processing",
+        "content": "We process your data solely for the purpose of conducting correspondence and responding to your inquiries. The legal basis for processing is the administrator's legitimate interest (Art. 6(1)(f) of the GDPR), consisting of building relationships with customers and providing information about our activities."
+      },
+      {
+        "heading": "4. Data sharing",
+        "content": "Your data is safe and is not shared with third parties for marketing purposes. Access to your data may only be granted to entities providing technical services to us (e.g., website hosting providers), solely to the extent necessary for the proper functioning of the site."
+      },
+      {
+        "heading": "5. Data retention period",
+        "content": "Your data will be stored for the time necessary to respond to your message and conclude the correspondence. After this time, the data will be deleted unless legal regulations require longer storage."
+      },
+      {
+        "heading": "6. User rights",
+        "content": "You have the right to: access your data and receive a copy of it, rectify your data, request the deletion of data (\"the right to be forgotten\"), restrict data processing, object to processing, and lodge a complaint with the supervisory authority (President of the Office for Personal Data Protection)."
+      },
+      {
+        "heading": "7. Cookies",
+        "content": "Our website may use cookies to ensure its proper operation and to maintain visit statistics. By using our site, you consent to the use of cookies in accordance with your browser settings. You can change these settings in your web browser at any time."
+      },
+      {
+        "heading": "8. Contact",
+        "content": "For matters related to personal data protection or to exercise your rights, please contact us at the e-mail address: kontakt@fabrykawarzyw.pl."
+      }
+    ]
   }
 }
+
