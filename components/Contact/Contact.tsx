@@ -9,7 +9,7 @@ const Contact = () => {
     <section className="w-full h-screen flex flex-col  font-bold p-10 bg-[#f1f1f1]">
       <ul className="w-full h-[90%] text-center flex flex-col justify-center items-center text-0.8xl lg:text-3xl">
         {contactOptions.map((item) => (
-          <li key={item}>{t(item)}</li>
+          <li key={item} className="text-nowrap">{t(item)}</li>
         ))}
       </ul>
       <h2 className="w-full h-[10%] text-5xl lg:text-8xl text-end">
